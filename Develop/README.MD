@@ -1,4 +1,4 @@
-# 
+# README GENERATOR
   ----------------
   ## table of Contents
   -----------------------
@@ -11,15 +11,15 @@
 
 ### Description
 -------------------
-
+this project lets youy create read me files
 
 ### Usage
 -----------
-
+it is designed to create readme files much easier then normal
 
 ### Installation
 -------------------
-
+you just install the data by typing into the terminal what you need
 
 ### License
 -------------
@@ -29,10 +29,10 @@ MIT
 
 ### Contributing
 -------------------
-
+you can fork the repository abd contribute at will
 
 ### Contact Information
 -------------------------
-### Github: https://github.com/Colehubert/
-#### Email: 
+### Github: https://github.com/Colehubert/Colehubert
+#### Email: Colehubert2001@gmail.com
 
