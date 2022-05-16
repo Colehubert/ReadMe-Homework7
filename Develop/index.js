@@ -1,6 +1,11 @@
 // TODO: Include packages needed for this application
+//import fetch from 'node-fetch'
+//const fetch = import('node-fetch');
+//globalThis.fetch = fetch;
+
 const inquirer = require('inquirer');
 const  generateMarkdown  = require('./utils/generateMarkdown');
+//const  renderLicenseBadge = require('./utils/renderLicenseBadge');
 const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -15,17 +20,17 @@ message: 'what would you describe your project as?',
 },
 {
     type: 'input',
-    name: 'instructions',
+    name: 'installation',
     message: 'what are your installation instructions?',
     },
     {
         type: 'input',
-        name: 'design',
+        name: 'usage',
         message: 'How was your project designed to be used?',
         },
         {
             type: 'input',
-            name: 'contribute',
+            name: 'contributing',
             message: 'How can one contribute to your project?',
             },
             {
@@ -35,7 +40,7 @@ message: 'what would you describe your project as?',
                 },
                 {
                     type: 'input',
-                    name: 'username',
+                    name: 'github',
                     message: 'Enter your GitHub Username.',
                     },
                     {
@@ -50,8 +55,14 @@ function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
+    
     inquirer.prompt(questions).then((data)=> {
       const markdown =   generateMarkdown(data);
+     
+
+      //fetch(`https://img.shields.io/github/license/Colehubert/${data.license}`).then(response => response.json()).then(data => console.log(data));
+      //const badge =  renderLicenseBadge(data);
+      //console.log(badge)
         fs.writeFile('README.MD',markdown, (err)=>{
             if(err){
                 console.log(err)
